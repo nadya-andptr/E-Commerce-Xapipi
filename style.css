@@ -2,9 +2,11 @@
 *{
   box-sizing: border-box;
 }
-body{
+body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin: 0;
+  padding: 0;
+  width: 100%;
   background-color: #f6f5f9;
   color: #3a6a9b;
 }
@@ -14,12 +16,14 @@ header {
   color: #163a5b(250, 248, 248);
   text-align: center;
   padding: 25px;
+  width: 100%;
 }
 /* navbar */
 nav {
   background-color: #376586;
   text-align: center;
   padding: 15px;
+  width: 100%;
 }
 nav a {
   color: white;
@@ -43,7 +47,7 @@ main {
   border-radius: 10px;
   margin-bottom: 35px;
 }
-.tombol {
+.button {
   background-color: #163a5b;
   color: white;
   display: inline-block;
@@ -51,7 +55,7 @@ main {
   border-radius: 5px;
   padding: 12px 20px;
 }
-.tombol:hover {
+.button:hover {
   background-color: #2786df;
 }
 
@@ -96,4 +100,34 @@ footer{
   color: white;
   text-align: center;
   padding: 25px;
+}
+
+@media screen and (max-width: 480px) {
+
+  header,
+  nav,
+  main,
+  footer {
+    width: 100%;
+  }
+
+  main {
+    padding: 0 15px;
+  }
+
+  .daftar-produk {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .produk {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .produk img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
 }
